@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2><a class="navbar-brand  text-info" href="#"><i class="fa fa-paw"></i>Dogs Site</a></h2>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-6"></div>
+
+    <div class="col-lg-6">
+        <div><h3 class="text-success"><i class="fa fa-bookmark"></i>
+          Available Dog Breeds:</h3></div></div>
+  </div>
+  <div class="row">
+      <div class="col-lg-3 col-sm-12 col-xs-12 card_div">
+        <div class="row">
+        <img class="col-lg-12 col-sm-12 col-xs-12 img_dog_profile" src="{{img_url}}"/>
+        </div>        
+        <div class="text-center text-capitalize bg-success"><h3>{{breed_name}}</h3></div>
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+          <div class="text-info"><h4>{{sub_breed_title}}</h4></div>
+            <div class="col-lg-12 col-sm-12 col-xs-12"  *ngFor="let sbreed of sub_breeds_array" (click)="fetch_img_by_breed_sub_breed(sbreed)">
+                <h5 class="text-warning dobreed_text"><i class="fa fa-paw"></i>&nbsp;{{sbreed}}</h5></div>
+               
+        </div>
+
+        </div>
+    <div class="col-lg-9 col-sm-12 col-xs-12">
+        <div class="col-lg-2 col-sm-12 col-xs-12"  *ngFor="let breed of breeds_array" (click)="breedDetail(breed)">
+            <h5 class="text-primary dobreed_text text-capitalize"><i class="fa fa-paw"></i>&nbsp;{{breed}}</h5></div>
+           
+    </div>
+  
+  </div>
+</div>
+</body>
+</html>
+

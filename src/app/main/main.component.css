@@ -1,0 +1,23 @@
+.dobreed_text:hover
+{
+cursor: pointer;
+color: #f4e542;
+}
+.card_div
+{
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px #888888;
+
+}
+.img_dog_profile
+{
+    border-radius: 1%;
+    max-height:200px;
+}
+
+.img_dog_profile:hover
+{
+    border: 1px #ff5050;
+    border-style: solid;
+
+}
